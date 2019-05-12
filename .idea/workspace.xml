@@ -18,8 +18,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="264">
               <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+=======
+            <state relative-caret-position="216">
+              <caret line="54" column="27" lean-forward="true" selection-start-line="54" selection-start-column="27" selection-end-line="54" selection-end-column="27" />
+>>>>>>> first_version2
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -132,7 +137,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="2001000" />
+=======
+    <option name="totallyTimeSpent" value="1686000" />
+>>>>>>> first_version2
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="908" height="1047" extended-state="0" />
@@ -217,8 +226,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="264">
           <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+=======
+        <state relative-caret-position="216">
+          <caret line="54" column="27" lean-forward="true" selection-start-line="54" selection-start-column="27" selection-end-line="54" selection-end-column="27" />
+>>>>>>> first_version2
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
