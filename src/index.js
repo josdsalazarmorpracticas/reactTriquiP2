@@ -11,29 +11,6 @@ function Square(props) {
 }
 
 class Board extends React.Component {
-<<<<<<< 80e9e82d7c9da69dbbe69e38627944b37fc2423f
-    constructor(props) {
-        super(props);
-        this.state = {
-            squares: Array(9).fill(null),
-            xIsNext: true,
-        };
-    }
-
-    handleClick(i) {
-        const squares = this.state.squares.slice();
-        if (calculateWinner(squares) || squares[i]) {
-            return;
-        }
-        squares[i] = this.state.xIsNext ? 'X' : 'O';
-        this.setState({
-            squares: squares,
-            xIsNext: !this.state.xIsNext,
-        });
-    }
-
-=======
->>>>>>> Final corregido
     renderSquare(i) {
         return (
             <Square
@@ -44,21 +21,6 @@ class Board extends React.Component {
     }
 
     render() {
-<<<<<<< 80e9e82d7c9da69dbbe69e38627944b37fc2423f
-<<<<<<< 80e9e82d7c9da69dbbe69e38627944b37fc2423f
-        const status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
-=======
-        const winner = calculateWinner(this.state.squares);
-        let status;
-        if (winner) {
-            status = 'Winner: ' + winner;
-        } else {
-            status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
-        }
->>>>>>> Init version 1.2.4
-
-=======
->>>>>>> Final corregido
         return (
             <div>
                 <div className="board-row">
