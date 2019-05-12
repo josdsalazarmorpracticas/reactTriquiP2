@@ -4,26 +4,36 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+<<<<<<< HEAD
+class Square extends React.Component {
+    render() {
+        return (
+            <button className="square">
+                {/* TODO */}
+            </button>
+        );
+    }
+}
+=======
 ReactDOM.render(<App />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
+>>>>>>> parent of 51df22a... mmm
 
 class Board extends React.Component {
     renderSquare(i) {
-        return (
-            <Square
-                value={this.props.squares[i]}
-                onClick={() => this.props.onClick(i)}
-            />
-        );
+        return <Square />;
     }
 
     render() {
+        const status = 'Next player: X';
+
         return (
             <div>
+                <div className="status">{status}</div>
                 <div className="board-row">
                     {this.renderSquare(0)}
                     {this.renderSquare(1)}
@@ -45,46 +55,9 @@ class Board extends React.Component {
 }
 
 class Game extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            history: [
-                {
-                    squares: Array(9).fill(null)
-                }
-            ],
-            stepNumber: 0,
-            xIsNext: true
-        };
-    }
-
-    handleClick(i) {
-        const history = this.state.history.slice(0, this.state.stepNumber + 1);
-        const current = history[history.length - 1];
-        const squares = current.squares.slice();
-        if (calculateWinner(squares) || squares[i]) {
-            return;
-        }
-        squares[i] = this.state.xIsNext ? "X" : "O";
-        this.setState({
-            history: history.concat([
-                {
-                    squares: squares
-                }
-            ]),
-            stepNumber: history.length,
-            xIsNext: !this.state.xIsNext
-        });
-    }
-
-    jumpTo(step) {
-        this.setState({
-            stepNumber: step,
-            xIsNext: (step % 2) === 0
-        });
-    }
-
     render() {
+<<<<<<< HEAD
+=======
         const history = this.state.history;
         const current = history[this.state.stepNumber];
         const winner = calculateWinner(current.squares);
@@ -106,17 +79,18 @@ class Game extends React.Component {
         } else {
             status = "Next player: " + (this.state.xIsNext ? "X" : "O");
         }
+>>>>>>> parent of 51df22a... mmm
         return (
             <div className="game">
                 <div className="game-board">
-                    <Board
-                        squares={current.squares}
-                        onClick={i => this.handleClick(i)}
-                    />
+                    <Board />
                 </div>
                 <div className="game-info">
-                    <div>{status}</div>
-                    <ol>{moves}</ol>
+                    <div>{/* status */}</div>
+                    <ol>{/* TODO */}</ol>
+                </div>
+                <div className="shopping-list">
+                    <ShoppingList/>
                 </div>
                 <div className="shopping-list">
                     <ShoppingList/>
@@ -139,6 +113,20 @@ class ShoppingList extends React.Component {
         );
     }
 }
+<<<<<<< HEAD
+class ShoppingList extends React.Component {
+    render() {
+        return (
+            <div className="shopping-list">
+                <h1>Shopping List for {this.props.name}</h1>
+                <ul>
+                    <li>Instagram</li>
+                    <li>WhatsApp</li>
+                    <li>Oculus</li>
+                </ul>
+            </div>
+        );
+=======
 // ========================================
 ReactDOM.render(
     <Game />,
@@ -160,6 +148,12 @@ function calculateWinner(squares) {
         if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
             return squares[a];
         }
+>>>>>>> parent of 51df22a... mmm
     }
-    return null;
 }
+// ========================================
+
+ReactDOM.render(
+    <Game />,
+    document.getElementById('root')
+);
